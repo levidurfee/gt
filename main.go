@@ -25,6 +25,10 @@ func (p *Person) getPet() {
 }
 
 func gone(s string) {
+	fmt.Printf(s + "\n")
+}
+
+func main() {
 	p := Person {
 		Id: 1,
 		Name: "Levi",
@@ -38,9 +42,5 @@ func gone(s string) {
 
 	p.getPet()
 
-	fmt.Printf(s + "\n")
-}
-
-func main() {
 	gone("bye!")
 }
