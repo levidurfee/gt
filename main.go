@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"github.com/levidurfee/stringutil"
 )
 
 type Person struct {
@@ -43,4 +44,5 @@ func main() {
 	p.getPet()
 
 	gone("bye!")
+	fmt.Printf(stringutil.Reverse("Oh helloo!!!"))
 }
