@@ -19,6 +19,14 @@ type Pet struct {
 	PetAge int
 }
 
+type Petter interface {
+	GivePets(p Pet) string
+}
+
+func (p *Person) GivePets(pet Pet) {
+	fmt.Printf(p.Name + " gives " + pet.PetName + " 100 pets.. aww.. good pet!\n")
+}
+
 func (p *Person) getPet() {
 	dogAge := strconv.Itoa(p.Pet.PetAge)
 	dogYears := strconv.Itoa(p.Pet.PetAge * 7)
@@ -42,6 +50,7 @@ func main() {
 	}
 
 	p.getPet()
+	p.GivePets(p.Pet)
 
 	gone("bye!")
 	fmt.Printf(stringutil.Reverse("Oh helloo!!!"))
