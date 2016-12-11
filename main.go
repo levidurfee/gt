@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/levidurfee/gt/prime"
 	"github.com/levidurfee/stringutil"
 	"strconv"
 )
@@ -35,7 +36,7 @@ func (p *Person) getPet() {
 }
 
 func gone(s string) {
-	fmt.Println(s + "\n")
+	fmt.Println("Gone: " + s)
 }
 
 func main() {
@@ -55,4 +56,9 @@ func main() {
 
 	gone("bye!")
 	fmt.Println(stringutil.Reverse("Oh helloo!!!"))
+
+	primes := prime.Sieve(100)
+	for _, p := range primes {
+		fmt.Printf(strconv.Itoa(p) + ", ")
+	}
 }
