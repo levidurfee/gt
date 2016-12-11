@@ -51,8 +51,8 @@ func main() {
 	}
 
 	p.getPet()
-	fmt.Printf(p.GivePets(p.Pet))
+	fmt.Printf(p.GivePets(p.Pet) + "\n")
 
 	gone("bye!")
-	fmt.Printf(stringutil.Reverse("Oh helloo!!!"))
+	fmt.Printf(stringutil.Reverse("Oh helloo!!!") + "\n")
 }
