@@ -30,12 +30,12 @@ func (p *Person) GivePets(pet Pet) string {
 func (p *Person) getPet() {
 	dogAge := strconv.Itoa(p.Pet.PetAge)
 	dogYears := strconv.Itoa(p.Pet.PetAge * 7)
-	fmt.Printf("Hi, I am " + p.Name + " and I have a pet named " + p.Pet.PetName + ", he is " + dogAge +
-		" in human years. That makes him " + dogYears + " in dog years!\n")
+	fmt.Println("Hi, I am " + p.Name + " and I have a pet named " + p.Pet.PetName + ", he is " + dogAge +
+		" in human years. That makes him " + dogYears + " in dog years!")
 }
 
 func gone(s string) {
-	fmt.Printf(s + "\n")
+	fmt.Println(s + "\n")
 }
 
 func main() {
@@ -51,8 +51,8 @@ func main() {
 	}
 
 	p.getPet()
-	fmt.Printf(p.GivePets(p.Pet) + "\n")
+	fmt.Println(p.GivePets(p.Pet))
 
 	gone("bye!")
-	fmt.Printf(stringutil.Reverse("Oh helloo!!!") + "\n")
+	fmt.Println(stringutil.Reverse("Oh helloo!!!"))
 }
